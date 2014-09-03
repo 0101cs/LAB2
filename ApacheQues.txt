@@ -1,0 +1,47 @@
+Ant Examine the build.xml file.
+
+1) How many targets are there? 6
+
+2) What are they?
+	-Make Directories
+	-compile java
+	-Deploy files to tomcat
+	-clean build
+	-start tomcat
+	-stop tomcat 
+
+3) Explain the dependencies among these targets. 
+	The directories are made early on and are used by all the following targets. The compile depends on init, the directory, on where the files are to compile using java.
+	Deploy depends on compile since files can not be executed until they are. The clean makes sure it has a clean slate so that old files are not used once tomcat 
+	has started.   
+
+4) Actually you can just type ant deploy without doing ant compile first. To try that, let us do a clean build by typing ant clean and then enter ant deploy.
+Why can we deploy the application to tomcat using ant deploy without even doing ant compile first?
+
+5) Why you can deploy an application by entering ant  without typing ant deploy?
+
+6) Change your ant build file, so that in one step, i.e., type one command at the command line, you can compile your source code, deploy your files to tomcat, and then start Tomcat. What changes did you have to make?
+
+Maven Example the pom.xml file.
+
+7) We set the package level to war. What is the default level? What are the other options?
+
+8) If we wanted to include the lastest version of a library called spring-core, how would we go about that? Hint: Search http://mvnrepository.com/
+
+9) What does the group id mean/refer? What about the artifact id?
+
+10) How could we setup maven to deploy the app as well?
+
+Gradle Examine the build.gradle file.
+
+11) If we wanted to include the lastest version of a library called spring-core, how would we go about that?
+
+12) Do you feel gradle is closer to ant or maven in terms of its functionality and implementation or do you think it is like comparing apples to oranges?
+
+Ant/Maven/Gradle Comparison
+
+13) Which language(s) do you use to build your script for each tool?
+
+14) Which one do you like best? Why? (There is no right or wrong answer. The only wrong answer is one without details explaining why.)
+
+15) Google uses gradle as android's build system, US Bank uses ant, and American Modern uses maven. Research and see if you can find different tools or companies that use ant, maven, or gradle.
